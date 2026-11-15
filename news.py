@@ -38,7 +38,7 @@ Liste: {json.dumps(items, ensure_ascii=False)}"""
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 r = client.models.generate_content(
-    model="gemini-2.5-flash-lite",
+    model="gemini-3.5-flash-lite",
     contents=prompt,
     config=types.GenerateContentConfig(response_mime_type="application/json"),
 )
